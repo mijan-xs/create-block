@@ -1,10 +1,10 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "gutenebrgkit/gutenebrgkit-block",
+	"name": "gutenbergkit/gutenbergkit-block",
 	"version": "1.0.0",
-	"title": "Gutenebrgkit Block",
-	"category": "gutenebrgkit",
+	"title": "Gutenbergkit Block",
+	"category": "gutenbergkit",
 	"description": "gutenbergkit boilterplate block",
 	"example": {
 		"preview": true
