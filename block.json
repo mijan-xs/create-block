@@ -1,16 +1,29 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "create-block/gutenebrgkit-block",
+	"name": "gutenebrgkit/gutenebrgkit-block",
 	"version": "0.1.0",
 	"title": "Gutenebrgkit Block",
-	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"category": "gutenebrgkit",
+	"description": "gutenbergkit boilterplate block",
+	"example": {
+		"preview": true
+	},
+	"attributes": {
+		"blockID": {
+			"type": "string"
+		},
+		"blockClass": {
+			"type": "string"
+		},
+		"blocksCSS": {
+			"type": "object"
+		}
+	},
 	"supports": {
 		"html": false
 	},
-	"textdomain": "gutenebrgkit-block",
+	"textdomain": "gutenbergkit",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

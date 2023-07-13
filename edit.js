@@ -1,41 +1,33 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
 import { __ } from '@wordpress/i18n';
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps } from '@wordpress/block-editor';
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 import './editor.scss';
+import Settings from './settings';
+import useDeviceType from '@/helper/useDeviceType';
+import classnames from 'classnames'
+import {
+	useBlockProps,
+} from '@wordpress/block-editor';
+import GkitStyle from '@/components/style-tag';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {WPElement} Element to render.
- */
-export default function Edit() {
+export default function Edit({ attributes, setAttributes, clientId, advancedControl }) {
+	const device = useDeviceType();
+	const blockProps = useBlockProps();
+
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Gutenebrgkit Block – hello from the editor!',
-				'gutenebrgkit-block'
-			) }
-		</p>
+		<>
+			<GkitStyle 
+				blocksCSS ={attributes?.blocksCSS}
+			/>
+
+			<Settings
+				attributes={attributes}
+				setAttributes={setAttributes}
+				device={device}
+				advancedControl={advancedControl}
+			/>
+
+			<div {...blockProps}>
+				{ /* Your markup goes here */ }
+			</div>
+		</>
 	);
 }
