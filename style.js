@@ -1,8 +1,14 @@
-import { backgroundGenerator, fillBackgroundGenerator } from "@/helper/backgroundGenerator";
-import { getBorderValue, getBoxValue, getSliderValue, getTextShadowValue, getTypographyValue } from "@/helper/get-css";
-import { parseCSS } from "@/helper/parse-css";
-
 const BlockStyle = (attributes) => {
+    const helpers = window.gutenkit.helpers;
+	const {
+        parseCSS,
+        backgroundGenerator,
+        getBoxShadowValue,
+        getBoxValue,
+        getBorderValue,
+        getTypographyValue,
+        getSliderValue
+    } = helpers;
     const WRAPPER = attributes.blockClass;
 	
 	const rawSyle = {
