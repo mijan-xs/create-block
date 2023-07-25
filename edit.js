@@ -6,9 +6,10 @@ import classnames from 'classnames'
 import {
 	useBlockProps,
 } from '@wordpress/block-editor';
-import GkitStyle from '@/components/style-tag';
 
 export default function Edit({ attributes, setAttributes, clientId, advancedControl }) {
+	const components = window.gutenkit.components;
+	const GkitStyle = components.GkitStyle;
 	const device = useDeviceType();
 	const blockProps = useBlockProps();
 
