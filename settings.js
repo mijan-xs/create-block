@@ -8,9 +8,6 @@ import {
 	__experimentalDivider as Divider,
 	__experimentalSpacer as Spacer,
 } from '@wordpress/components';
-import GkitTabs from '@/components/tabs';
-import GkitPanelBody from '@/components/panel-body';
-import GkitResponsive from '@/components/responsive';
 import BlockStyle from './style';
 import gkitResponsiveValue from '@/helper/gkitResponsiveValue';
 import useFontFamilyinBlock from '@/helper/useFontFamilyinBlock';
