@@ -17,6 +17,22 @@ import useFontFamilyinBlock from '@/helper/useFontFamilyinBlock';
 import responsiveHelper from '@/helper/responsiveHelper';
 
 const Settings = ({ attributes, setAttributes, device, advancedControl }) => {
+        const components = window.gutenkit.components;
+	const { 
+	    	GkitBoxShadow, 
+	    	GkitColor, 
+            	GkitIconPicker, 
+		GkitPanelBody, 
+		GkitRepeater, 
+		GkitResponsive, 
+		GkitSwitcher, 
+		GkitTabs, 
+		GkitTypography, 
+		GkitBackgrounGroup, 
+		GkitText, 
+		GkitSlider 
+	    } = components;
+	
 	//Block Style
 	useEffect(() => {
 		let blockStyle = BlockStyle(attributes);
